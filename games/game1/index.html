@@ -1,1 +1,53 @@
-<h1>This is game 1</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>GAME 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+	<section class="top"></section>
+	<section class="middle">
+		<div class="w3-container" id="myContent">
+			<div class="w3-row theValue" id="toSelect"></div>
+			<div class="w3-row theScore"><span class="justTextScore">YOUR SCORE : </span><span id="toScore">0</span></div>
+			<div class="contents options">
+				<div class="w3-row">
+					<div class="w3-col l4 m4 s12">
+						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option1">
+							
+						</div>
+					</div>
+					<div class="w3-col l4 m4 s12">
+						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option2">
+							
+						</div>
+						
+					</div>
+					<div class="w3-col l4 m4 s12">
+						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option3">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<video id="backgroundSound" controls="" name="media" style="display: none;">
+		<source  src="sounds/bg_sound.ogv" type="video/ogg"></video>
+	<section class="bottom"></section>
+	<video id="hoverSound" controls="" name="media" style="display: none;">
+		<source src="sounds/Jump_5.mp3" type="audio/mp3"></video>
+	<section class="bottom"></section>  
+	<video id="clickSound" controls="" name="media" style="display: none;">
+		<source src="sounds/Walk_2_Foot_4.mp3" type="audio/mp3"></video>
+	<section class="bottom"></section>  
+	
+	
+	<script src="../../js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
