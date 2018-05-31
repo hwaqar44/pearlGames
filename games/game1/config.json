@@ -1,0 +1,10 @@
+{
+  "totalOptions": "3",
+  "level": "10",
+  "displayItem": "images/apple.png",
+  "bgSoundFile":"sounds/bg_sound.ogv",
+  "mouseOverFile":"sounds/Jump_5.mp3",
+  "clickWrong":"sounds/Game_Over.mp3",
+  "clickRightFile":"sounds/Walk_2_Foot_4.mp3",
+  "bgSoundFile":"sounds/bg_sound.ogv"
+}

@@ -10,10 +10,11 @@
 
 
 	<section class="top"></section>
-	<section class="middle">
+	<section class="middle" style="display:none;">
 		<div class="w3-container" id="myContent">
 			<div class="w3-row theValue" id="toSelect"></div>
 			<div class="w3-row theScore"><span class="justTextScore">YOUR SCORE : </span><span id="toScore">0</span></div>
+			<div class="w3-row theLevel"><span class="justLevel">Level : </span><span id="toScore">1</span></div>
 			<div class="contents options">
 				<div class="w3-row">
 					<div class="w3-col l4 m4 s12">
@@ -36,15 +37,21 @@
 			</div>
 		</div>
 	</section>
-	<video id="backgroundSound" controls="" name="media" style="display: none;">
-		<source  src="sounds/bg_sound.ogv" type="video/ogg"></video>
-	<section class="bottom"></section>
-	<video id="hoverSound" controls="" name="media" style="display: none;">
-		<source src="sounds/Jump_5.mp3" type="audio/mp3"></video>
-	<section class="bottom"></section>  
-	<video id="clickSound" controls="" name="media" style="display: none;">
-		<source src="sounds/Walk_2_Foot_4.mp3" type="audio/mp3"></video>
-	<section class="bottom"></section>  
+	<section class="on-landing">
+		<div class="w3-container" id="myContent">
+			<div class="w3-row landing-img">
+				<div class="w3-col l12 m12 s12">
+					<img src="images/landing-image.png" alt="Logo May be" width="250"/>
+				</div>
+			</div>
+		
+		<div class="w3-row continue-btn">
+				<div class="w3-col l12 m12 s12">
+					<img src="images/continue-button.png" alt="play" class="brightness" width="250"/>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	
 	<script src="../../js/jquery.min.js"></script>
