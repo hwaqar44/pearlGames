@@ -39,7 +39,7 @@ $(document).ready(function(){
 	
 	$('.optionToChoose').on('mouseover',function(e){
 		var mouseOverSound = new Audio(mouseOverFile);
-		mouseOverSound.play();
+		//mouseOverSound.play();
 		e.stopPropagation();
 	});
 	
@@ -48,12 +48,12 @@ $(document).ready(function(){
 		
 		if(getValue() == value){
 			var clickSound = new Audio(clickRight);
-			clickSound.play();
+			//clickSound.play();
 			addScore();
 			create();
 		} else{
 			var clickSound = new Audio(clickWrong);
-			clickSound.play();
+			//clickSound.play();
 			subScore();
 			//create();
 		}
@@ -88,6 +88,7 @@ function create(){
 			setValue(firstBox);
 			$('#toSelect')[0].innerText= firstBox;
 		}
+			option.fadeOut();
 		option.attr('data-imgs',firstBox);
 		var totalWidth = option.width(),
 			totalHeight = option.height();
@@ -101,6 +102,7 @@ function create(){
 			option.append(img);
 			i++;
 		}
+		option.fadeIn(),
 		opt++;
 		val++;
 	}
@@ -118,8 +120,8 @@ function create(){
 function playmusic(){
 	// play music 
 	var backgroundMusic = new Audio(bgSoundFile);
-	backgroundMusic.loop = true;
-	backgroundMusic.play();
+	//backgroundMusic.loop = true;
+	//backgroundMusic.play();
 	
 }
 
