@@ -1,32 +1,70 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-
-<title>Some Title</title>
-
-<link rel="stylesheet" href="style.css" />
-
-<script type="text/javascript" src="//use.typekit.net/vue1oix.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-<script src="jquery.js"></script>
-
-<script src="javascript.js"></script>
-
+<title>GAME 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
-	
-	<div class="clipped-box">
-		
-		<div class="content">
-			<h1>CLICK TO DELETE ME</h1>
-			<p>I'll explode into pieces!</p>
+
+	<section class="top"></section>
+	<section class="middle" style="display:none;">
+		<div class="w3-container" id="myContent">
+			<div class="w3-row theScore"><span class="justTextScore">YOUR SCORE : </span><span id="toScore">0</span></div>
+			<div class="w3-row theLevel"><span class="justLevel">Level : </span><span id="toScore">1</span></div>
+			<div class="contents options">
+				<div class="w3-row">
+					<img src="images/apple.png" alt="?" class="brightness" width="250"/>
+				</div>
+			</div>
+			<div class="w3-container" id="selectionContents">
+				<div class="w3-row drop" id="toDropIn">
+					<div class="w3-col l4"> </div>
+					<div class="w3-col l4" style="display:flex;">
+						<div class="inner-col ltrA">P</div>
+						<div class="inner-col ltrP">A</div>
+						<div class="inner-col ltrP">P</div>
+						<div class="inner-col ltrL">E</div>
+						<div class="inner-col ltrE">L</div>
+					</div>
+					<div class="w3-col l4"> </div>
+				</div>
+			
+				<div class="w3-row drag" id="toDragFrom">
+					<div class="w3-col l4"> </div>
+					<div class="w3-col l4" style="display:flex;">
+						<div class="inner-col ltrA">A</div>
+						<div class="inner-col ltrP">P</div>
+						<div class="inner-col ltrP">P</div>
+						<div class="inner-col ltrL">L</div>
+						<div class="inner-col ltrE">E</div>
+					</div>
+					<div class="w3-col l4"> </div>
+				</div>
+			
+			</div>
 		</div>
-				
-	</div>
+	</section>
+	<section class="on-landing">
+		<div class="w3-container" id="myContent">
+			<div class="w3-row landing-img">
+				<div class="w3-col l12 m12 s12">
+					<img src="images/landing-image.png" alt="Logo May be" width="250"/>
+				</div>
+			</div>
 		
-</div>
+		<div class="w3-row continue-btn">
+				<div class="w3-col l12 m12 s12">
+					<img src="images/continue-button.png" alt="play" class="brightness" width="250"/>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<script src="../../js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
