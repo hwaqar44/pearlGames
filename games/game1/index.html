@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>GAME 1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-
-	<section class="top"></section>
-	<section class="middle" style="display:none;">
-		<div class="w3-container" id="myContent">
-			<div class="w3-row theValue" id="toSelect"></div>
-			<div class="w3-row theScore"><span class="justTextScore">YOUR SCORE : </span><span id="toScore">0</span></div>
-			<div class="w3-row theLevel"><span class="justLevel">Level : </span><span id="toScore">1</span></div>
-			<div class="contents options">
-				<div class="w3-row">
-					<div class="w3-col l4 m4 s12">
-						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option1">
-							
-						</div>
-					</div>
-					<div class="w3-col l4 m4 s12">
-						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option2">
-							
-						</div>
+	<head>
+		<title>GAME 1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		
+		<!-- To Most Section of the game-->
+		<section class="top">
+			
+		</section>
+		
+		<!-- Game play Section of the game-->
+		<section class="middle" style="display:none;">
+		<div class="w3-container" id="main-play">
+			
+			<div class="w3-cell-row">
+				<div class="w3-container w3-cell">
+					<div class="w3-row theScore"><span class="justTextScore">SCORE : </span><span id="toScore">0</span></div>
+				  </div>
+				  <div class="w3-container w3-cell w3-right-align">
+					<div class="w3-row theLevel"><span class="justLevel">Level : </span><span id="toScore">1</span></div>
+				  </div>
+			</div>
+			<div class="w3-cell-row w3-mobile">
+				<div class="w3-container w3-cell w3-center w3-mobile">
+					<div class="w3-row theValue" id="toSelect"></div>
+				  </div>
+			</div>
+			
+			
+			<div class="w3-cell-row contents w3-center options w3-display-middle  w3-mobile">
+				<div class="w3-container w3-cell w3-center  w3-mobile">
+					<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option1">
 						
 					</div>
-					<div class="w3-col l4 m4 s12">
-						<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option3">
-							
-						</div>
+				</div>
+				<div class=" w3-container w3-cell w3-center w3-mobile">
+					<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option2">
+						
+					</div>
+					
+				</div>
+				<div class="w3-container w3-cell w3-center w3-mobile">
+					<div class="w3-container w3-card-2 w3-blue w3-margin w3-hover-blue optionToChoose" id="option3">
+						
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class="on-landing">
-		<div class="w3-container" id="myContent">
-			<div class="w3-row landing-img">
-				<div class="w3-col l12 m12 s12">
-					<img src="images/landing-image.png" alt="Logo May be" width="250"/>
-				</div>
-			</div>
+		</section>
 		
-		<div class="w3-row continue-btn">
-				<div class="w3-col l12 m12 s12">
-					<img src="images/continue-button.png" alt="play" class="brightness" width="250"/>
+		<!-- landing Section of the game-->
+		<section class="on-landing">
+			<div class="w3-container" id="myContent">
+				<div class="w3-container item image">
+					<img src="images/landing-image.png" alt="Logo May be"/>
+				</div>
+			
+				<div class="w3-container item continue-btn">
+						<img src="images/continue-button.png" alt="play" class="brightness"/>
 				</div>
 			</div>
-		</div>
-	</section>
-	
-	
-	<script src="../../js/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
+		</section>
+		
+		<script src="../../js/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>

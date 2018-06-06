@@ -76,25 +76,48 @@ img.display-img{
 	width: 50px;
 	height: 50px;
 }
-div#selectionContents {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 50%;
-    font-size: 40px;
-    font-weight: bold;
-    color: blue;
+div.selectionContents {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      /* top: 50%; */
+      font-size: 40px;
+      font-weight: bold;
+      color: blue;
+      width: 100%;
+      /* height: 20%; */
 }
-
 .inner-col {
-    font-size: 96px;
-    margin-left: 30px;
-    color: blue;
-    border: 1px dotted red;
-    /* width: 250px; */
-    /* height: 250px; */
+    float: left;
+    font-size: 82px;
+    text-align: center;
+}
+.inner-col {
+    width: 100px;
+   // height: 100px;
+    border: 1px dotted black;
+    background: #7a68b3;
+    margin-left: 5px;
+    float: left;
+    color: white;
+    padding: 0px;
+}
+div.toDropIn {
+    margin: 0;
+}
+div#drop {
+    top: 50%;
+    opacity: 0.9;
+	display: flex;
+    justify-content: center;
 }
 
+div#drag {
+    top: 71%;
+    opacity: 0.9;
+	display: flex;
+    justify-content: center;
+}
 
 /* for Mobile */
 @media only screen and (max-width: 600px) {
@@ -123,7 +146,12 @@ div#selectionContents {
 		margin: 2px !important;
 	}
 	img.display-img{
-	width: 30px;
-	height: 30px;
+		width: 30px;
+		height: 30px;
+	}
 }
-}
+
+
+/* Now all Media queries for all devices*/
+
+

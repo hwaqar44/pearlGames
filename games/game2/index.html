@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GAME 1</title>
+<title>GAME 2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/style.css">
@@ -15,37 +15,25 @@
 			<div class="w3-row theScore"><span class="justTextScore">YOUR SCORE : </span><span id="toScore">0</span></div>
 			<div class="w3-row theLevel"><span class="justLevel">Level : </span><span id="toScore">1</span></div>
 			<div class="contents options">
-				<div class="w3-row">
+				<div class="w3-row" id="imageOff">
 					<img src="images/apple.png" alt="?" class="brightness" width="250"/>
 				</div>
 			</div>
-			<div class="w3-container" id="selectionContents">
-				<div class="w3-row drop" id="toDropIn">
-					<div class="w3-col l4"> </div>
-					<div class="w3-col l4" style="display:flex;">
-						<div class="inner-col ltrA">P</div>
-						<div class="inner-col ltrP">A</div>
-						<div class="inner-col ltrP">P</div>
-						<div class="inner-col ltrL">E</div>
-						<div class="inner-col ltrE">L</div>
-					</div>
-					<div class="w3-col l4"> </div>
-				</div>
-			
-				<div class="w3-row drag" id="toDragFrom">
-					<div class="w3-col l4"> </div>
-					<div class="w3-col l4" style="display:flex;">
-						<div class="inner-col ltrA">A</div>
-						<div class="inner-col ltrP">P</div>
-						<div class="inner-col ltrP">P</div>
-						<div class="inner-col ltrL">L</div>
-						<div class="inner-col ltrE">E</div>
-					</div>
-					<div class="w3-col l4"> </div>
-				</div>
-			
-			</div>
 		</div>
+		
+			<div class="w3-container selectionContents" id="drop">
+				<div class="w3-row toDropIn" id="drop-inner">
+				</div> 
+			</div>
+			<div class="w3-container selectionContents" id="drag">
+				<div class="w3-row toDropIn" id="drag-inner">
+					<div class="inner-col ltrA" draggable="true" ondragstart="drag(event)">A</div>
+					<div class="inner-col ltrP" draggable="true" ondragstart="drag(event)">P</div>
+					<div class="inner-col ltrP" draggable="true" ondragstart="drag(event)">P</div>
+					<div class="inner-col ltrL" draggable="true" ondragstart="drag(event)">L</div>
+					<div class="inner-col ltrE" draggable="true" ondragstart="drag(event)">E</div>
+				</div> 
+			</div>
 	</section>
 	<section class="on-landing">
 		<div class="w3-container" id="myContent">

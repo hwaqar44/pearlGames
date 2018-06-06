@@ -1,52 +1,66 @@
-
-html {
-    height: 100%
-}
-
 body{
-	margin: 0;
-	background-image: url(../images/background-image.jpg);
-    background-repeat: no-repeat;
-	 background-size: 100% 100%;
+		background: white;
+	}
+
+section.on-landing {
+    margin: 0 auto;
 }
 
-#myContent{
-	 width: 100%;
-	 display: flex;
-	 height: 100vh;
-	 justify-content: center;
-}
-
-.item{
-   color: white;
-   font-weight: bold;
-	align-self: center;
-}
-
-.contents.options {
+section.on-landing {
     width: 100%;
-    height: 30%;
-     right: -6%;
+    float: left;
+    height: 100%;
     position: fixed;
-    top: 50%;
+    border: 1px solid black;
+    color: white;
 }
 
-.w3-third.w3-container.w3-card-2 {
-    margin: 2px;
+div#myContent {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	height: 100%;
+    border: 1px solid black;
 }
+
+.image img {
+	width: 65%;
+	height: 100%;
+}
+
+.continue-btn img {
+	width: 65%;
+	height: 100%;
+}
+
+section.middle {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+img.display-img {
+    width: 50px;
+    height: 50px;
+}
+
 div.optionToChoose {
     width: 250px;
-    height: 250px;
-	border-radius: 24px;
+    height: 180px;
+    border-radius: 24px;
     padding: 15px;
-	border: 1px solid blue;
+    border: 1px solid blue;
     box-shadow: 5px 10px 17px 0px grey;
-	background: #9c27b0!important;
+    background: #9c27b0!important;
+}
+
+.w3-display-middle{
+	top: 70%;
+    left: 54%;
 }
 
 .w3-row.theValue {
-    top: 45px;
-    position: fixed;
     font-size: 130px;
 }
 
@@ -63,49 +77,216 @@ span#toScore {
     width: 84%;
 }
 
-.w3-row.landing-img {
-    position: fixed;
-}
 
-.w3-row.continue-btn {
-    position: fixed;
-    top: 50%;
-}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 200px to 320px
+*/
 
-img.display-img{
-	width: 50px;
-	height: 50px;
-}
-
-
-/* for Mobile */
-@media only screen and (max-width: 600px) {
-	div#toSelect {
-		font-size: 50px;
-		color: blue;
+@media (min-width: 200px) and (max-width: 320px) {
+ 
+	span.justTextScore, span.justLevel {
+		font-size: 12px;
 	}
-
-	.w3-row.theScore {
+	.w3-row.theValue {
+		font-size: 55px;
+	}
+	img.display-img {
+		width: 35px;
+		height: 35px;
+	}
+	div.optionToChoose {
+		width: 100%;
+		height: 100px;
+		border-radius: 15px;
+		border: 1px solid blue;
+		box-shadow: 5px 10px 17px 0px grey;
+		background: #9c27b0!important;
+	}
+	.w3-display-middle {
+		top: 61%;
+		left: 47%;
+		
+	}
+	.w3-margin {
+		margin: 4px!important;
+	}
+	.continue-btn img,.image img {
 		width: 65%;
+		height: 100%;
+		margin-left: 20%;
 	}
+  
+}
+/*
+@media (min-width: 321px) and (max-width: 440px) {
+	
+	body{
+		background: green;
+	}
+	span.justTextScore, span.justLevel {
+		font-size: 12px;
+	}
+	.w3-row.theValue {
+		font-size: 55px;
+	}
+	img.display-img {
+		width: 35px;
+		height: 35px;
+	}
+	div.optionToChoose {
+		width: 100%;
+		height: 100px;
+		border-radius: 15px;
+		border: 1px solid blue;
+		box-shadow: 5px 10px 17px 0px grey;
+		background: #9c27b0!important;
+	}
+	.w3-display-middle {
+		top: 100%;
+		left: 2%;
+		
+	}
+	.w3-margin {
+		margin: 4px!important;
+	}
+	.continue-btn img,.image img {
+		width: 38%;
+		margin-left: 32%;
+	}
+}
+*/
+@media (min-width: 441px) and (max-width: 540px) {
+	
+	.continue-btn img,.image img {
+		width: 33%;
+		margin-left: 35%;
+	}
+	
+	.w3-display-middle {
+		top: 60%;
+		left: 55%;
+	}
+	.w3-cell-row.w3-mobile {
+		margin-top: 0px;
+	}
+	span#toScore {
+		font-size: 17px;
+	}
+	span.justTextScore, span.justLevel {
+		font-size: 17px;
+	}
+	img.display-img {
+		width: 25px;
+		height: 25px;
+	}
+	div.optionToChoose {
+		width: 120px;
+		height: 120px;
+	}
+	.w3-row.theValue {
+		font-size: 35px;
+		color: #5050ab;
+		margin-left: 210px;
+	}
+	.w3-container.w3-cell.w3-center.w3-mobile {
+		padding: 0px;
+		margin: 0px;
+		width: 120px !important;
+		float: left;
+		margin: 2%;
+    /* left: 10%; */
+	}
+}
 
-	.contents.options {
-		top: 26%;
-		right: -10%;
+/* E pad portrait */
+@media (min-width: 541px) and (max-width: 767px) {
+	.w3-display-middle {
+		top: 61%;
+		left: 50%;
+	}
+	span.justTextScore, span.justLevel {
+		font-size: 36px;
+	}
+	span#toScore {
+		font-size: 47px;
+	}
+	.w3-row.theValue {
+		font-size: 120px;
+		color: #5050ab;
+		font-weight: bold;
+	}
+	img.display-img {
+		width: 50px;
+		height: 50px;
+	}
+	
+	div.optionToChoose {
+		width: 180px;
+		height: 210px;
+	}
+	
+	.w3-container.w3-cell.w3-center.w3-mobile {
+		padding: 0px;
+		margin: 0px;
 	}
 
 	div.optionToChoose {
-		width: 220px;
-		height: 150px;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.w3-cell-row.w3-mobile {
+		margin-top: 100px;
+	}
+	
+	.continue-btn img,.image img {
+		width: 60%;
+		margin-left: 18%;
+	}
+}
+
+
+/* E pad landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+	.w3-display-middle {
+		top: 61%;
+		left: 50%;
+	}
+	span.justTextScore, span.justLevel {
+		font-size: 36px;
+	}
+	span#toScore {
+		font-size: 47px;
+	}
+	.w3-row.theValue {
+		font-size: 64px;
+		color: #5050ab;
+	}
+	img.display-img {
+		width: 61px;
+		height: 61px;
+	}
+	
+	div.optionToChoose {
+		width: 300px;
+		height: 210px;
+	}
+	
+	.w3-container.w3-cell.w3-center.w3-mobile {
+		padding: 0px;
+		margin: 0px;
 	}
 
-	div#option1 {}
-
-	div.w3-margin {
-		margin: 2px !important;
+	div.optionToChoose {
+		margin: 0px;
+		padding: 0px;
 	}
-	img.display-img{
-	width: 30px;
-	height: 30px;
+	
+	.continue-btn img,.image img {
+		width: 60%;
+		margin-left: 18%;
+	}
 }
-}
+

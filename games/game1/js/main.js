@@ -9,7 +9,6 @@ var totalOptions,
 $(document).ready(function(){
 	
 	$.getJSON( "config.json", function( data ) {
-		
 		// Set All the configs
 		totalOptions = data.totalOptions;
 		level = data.level;
@@ -22,13 +21,10 @@ $(document).ready(function(){
 		
 		playmusic();
 		// Now create the game
-		create();
+		//create();
     });
-	
-	
-	
-	
-	
+
+	//alert(window.innerHeight + ': ' + window.innerWidth);
 	
 	$('.continue-btn').on('click',function(e){
 		$('.on-landing').hide();
@@ -76,13 +72,14 @@ function addScore(){
 function create(){
 	
 	var numberToChoose = Math.floor((Math.random() * totalOptions));
-	
 	$('.optionToChoose').children().remove();
 	
-	var opt = 0, val = 1;
+	var opt = 0, val = 1,
+			allNumbers = getRandomArbitrary(1,10);
+			
 	while(opt < totalOptions){
 		var option = $('#option'+val),
-			firstBox = Math.floor((Math.random() * level)),
+			firstBox = allNumbers[opt],
 			i = 1;
 		if(opt == numberToChoose){
 			setValue(firstBox);
@@ -92,13 +89,17 @@ function create(){
 		option.attr('data-imgs',firstBox);
 		var totalWidth = option.width(),
 			totalHeight = option.height();
-		var imageWidth = 1;
-		if(firstBox > 0){
-			imageWidth = totalWidth / firstBox;
-			//imageHeight = totalHeight / firstBox;
-		}
+		var imageWidth = 250,
+			imageHeight = 250;
+		var cls = 'class="display-img"';
+		$('.optionToChoose').each(function(index, item){
+			var ch = $(item).children().length;
+				if(ch === firstBox){
+					console.log('Changing the valuea');
+				}
+		});
 		while(i <= firstBox){
-			img = '<img src="'+displayItem+'" alt="Apple" class="display-img"/>'
+			img = '<img src="'+displayItem+'" alt="Apple" '+cls+'/>';
 			option.append(img);
 			i++;
 		}
@@ -126,7 +127,21 @@ function playmusic(){
 }
 
 function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+    var number = Math.floor(Math.random() * (max - min) + min);
+	 var arr = [1,2,3,4,5,6,7,8,9,10];
+		arr = shuffle(arr);
+	return arr.slice(0,3);
+}
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
 
 function setValue(val){
